@@ -1,0 +1,314 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   My Custom Styles
+   ========================================================================== */
+html, body {
+  	height: 100%;
+}
+body {
+	font-family: fieldwork,sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+nav {
+	overflow: hidden;
+	position: fixed;
+ 	top: 0;
+  	width: 100%;
+	background: rgba(55,83,55,.60);
+	display: flex;
+	justify-content: flex-start;
+}
+nav img {
+	height: 5em;
+	padding: 1em 10em 1em 10em
+}
+nav ul {
+	display: inline-block;
+	object-position: center;
+}
+nav ul li {
+	display: inline-block;
+	list-style-type: none;
+	padding-left: 5em;
+}
+nav ul li a {
+	text-decoration: none;
+	font-size: 2em;
+	color: white;
+}
+
+.hero-image {
+  background-image: url("../img/dark-river.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-text {
+  font-family: cubano, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  padding-top: 10em;
+  padding-bottom: 10em;
+  text-align: center;
+  color: white;
+  max-height: 100%;
+}
+.hero-text img {
+    height: 10em;
+}
+.hero-text button {
+    border-radius: 2em;
+	background-color:rgba(107,117,164,1.00);
+	color: white;
+	font-size: 1em;
+	padding: .25em 1em;
+}
+main .section-header {
+	height: 100px;
+	width: 450px;
+	border: 2px black solid;
+	box-shadow: 2px 2px 10px black;
+	margin: 20px auto;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+.section-header h2 {
+	text-align: center;
+}
+#content{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  padding-bottom:2.6em;
+}
+
+article.post{
+  width:31%;
+  padding:.7em;
+  box-shadow: 0 4px 8px rgba(0,0,0,.4);
+  border-radius:10px;
+  font-size:.9em;
+  transition:.5s;
+}
+
+article.post:hover{
+  box-shadow: 0 8px 16px rgba(0,0,0,.4);
+}
+
+article.post figure{
+  margin:0;
+}
+
+article.post time, article.post figcaption, article.post footer{
+  font-size:.7em;
+  text-transform:uppercase;
+  color: #BABCC8;
+}
+
+article.post img{
+  border-radius:5px;
+   transition:.5s;
+}
+
+article.post img:hover{
+  border-radius:20px;
+}
+
+article.post a:link, article.post a:visited {
+  color:#31487F;
+}
+
+article.post a:hover, article.post a:active {
+  text-decoration:none;
+}
+.footer {
+	position: relative;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+footer {
+	overflow: hidden;
+	position: fixed;
+  	width: 100%;
+	background: rgba(55,83,55,.60);
+	display: flex;
+	justify-content: flex-start;
+}
+footer img {
+	height: 5em;
+	padding: 1em 10em 1em 10em
+}
+footer ul {
+	display: inline-block;
+	object-position: center;
+}
+footer ul li {
+	display: inline-block;
+	list-style-type: none;
+	padding-left: 5em;
+}
+footer ul li a {
+	text-decoration: none;
+	font-size: 2em;
+	color: white;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+.hidden,
+[hidden] {
+  display: none !important;
+}
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+.invisible {
+  visibility: hidden;
+}
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+.clearfix::after {
+  clear: both;
+}
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
