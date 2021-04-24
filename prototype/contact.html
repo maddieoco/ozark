@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/style.css">
 	<link rel="stylesheet" href="https://use.typekit.net/lse7yph.css">
+    <script src="assets/js/vendor/main.js"></script>
 	
 
     <meta name="theme-color" content="#fafafa">
@@ -33,26 +34,46 @@
             <div class="hero-text">
                 <img alt="Ozark Rush Adventures Full Logo" src="assets/img/asset5white.png">
                 <p>YOUR TICKET TO ADVENTURE?<br>WE HAVE IT RIGHT HERE.</p>
-                <button>Let's Go &#62;</button>
+                <a href="index.html"><button>Let's Go &#62;</button></a>
             </div>
         </div>
     </header>
 	<main>
-		<div class="section-header">
-		<h2>WHERE TO FIND US</h2>
-		</div>
-		<div class="push"></div>
+		<div class="contact-container" style="background-image: url("assets/img/slapsh-action.jpg");">
+            <div class="left-col">
+              <img class="logo" src="assets/img/Asset 4.png"/>
+            </div>
+            <div class="right-col">
+              <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                  <input type="checkbox" id="checkbox" />
+            </label>
+          </div>
+              
+              <h1>Contact Us</h1>
+              <p>Let us help you bring your whole herd down to the Buffalo!</p>
+              
+              <form id="contact-form" method="post">
+                <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Your Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+                <label for="message">Your Message</label>
+            <textarea rows="6" placeholder="What can we help you with?" id="message" name="message" required></textarea>
+                <!--<a href="javascript:void(0)">--><button type="submit" id="submit" name="submit" class="submit">Submit</button><!--</a>-->
+            
+          </form>
+          <div id="error"></div>
+          <div id="success-msg"></div>
+            </div>
+          </div>
 	</main>
 	</div>
 	<footer class="footer">
-		<img alt="Ozark Rush Adventures" src="assets/img/asset4white.png">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="booking.html">Book</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>		
+		<img alt="Ozark Rush Adventures" src="assets/img/asset2white.png">
+		<p>&copy; 2021 Ozark Rush Adventures</p>
 	</footer>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
