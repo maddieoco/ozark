@@ -1,65 +1,690 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="River Levels AJAX Call">
-    <meta name="keywords" content="HTML, CSS,JavaScript, AJAX, jQuery">
-    <meta name="author" content="Taylor LoBue">
-    <title>River Levels AJAX Call</title>
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <title>Ozark Rush Adventures</title>
+    <meta name="description" content="Ozark Rush Adventures">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://use.typekit.net/lse7yph.css">
+	
+
+    <meta name="theme-color" content="#fafafa">
 </head>
-<div class="topnav">
-  <a class="active" href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="book.html">Book</a>
-  <a href="contact.html">Contact</a>
- </div>
+
 <body>
-    <form id="myform">
-        <div class="formcontainer">
-            <h2>River Level AJAX Call</h2>
-            
-            <input type="button" value="Show River Levels" id="ShowRiverLevels" name="ShowRiverLevels" onclick="GetRiverLevels();">
-            <br>
-            <hr>
-            <br>
-            <div class="charts">
-                
-                <canvas id="chartjs-0" width="400" height="400"></canvas>
-                
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div class="charts">
-                
-                <canvas id="chartjs-1" width="400" height="400"></canvas>
-                
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div class="charts">
-                
-                <canvas id="chartjs-2" width="400" height="400"></canvas>
-                
-            </div>
-            <br>
-            <hr>
-            <br>
-            <div class="charts">
-                
-                <canvas id="chartjs-3" width="400" height="400"></canvas>
+    <div class="wrapper">
+	<header>
+        <nav>
+			<img alt="Ozark Rush Adventures" src="assets/img/asset4white.png">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="booking.html">Book</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<div class="hero-image">
+            <div class="hero-text">
+                <img alt="Ozark Rush Adventures Full Logo" src="assets/img/asset5white.png">
+                <p>YOUR TICKET TO ADVENTURE?<br>WE HAVE IT RIGHT HERE.</p>
+                <a href="index.html"><button>Let's Go &#62;</button></a>
             </div>
         </div>
-    </form>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </header>
+	<main>
+		<div class="section-header">
+		<h2>BUFFALO RIVER LEVELS</h2>
+		</div>
+		
+		<div class="formcontainer">
+            
+            <section id="chartsection" > 
+                <div class="chart">
+                    <canvas class="charts" id="chartjs-0" width="400" height="400"></canvas>
+                    <p>NPS floating recommendations for Boxley:
+                    <br>Very Low: Less than 3.25 ft.
+                    <br>Moderate: 3.81-5.71 ft.
+                    <br>High 5.71-8.89 ft.
+                    <br>Flood stage: Greater than 8.89 ft
+                    <br><strong>The Boxley gage is best for float trips on the Hailstone and Boxley to Ponca.</strong>  
+                    </p>
+                </div>
+                <div class="chart">
+                    <canvas class="charts" id="chartjs-1" width="400" height="400"></canvas>
+                    <p>NPS floating recommendations for Ponca:
+                    <br>Very Low: Less than 2.4 ft.
+                    <br>Low: 2.40-2.82 ft.
+                    <br>Moderate: 2.82-3.65 ft.
+                    <br>High 3.65-6.00 ft.
+                    <br>Flood stage: Greater than 6 ft. gage height
+                    <br><strong>The Ponca gage is best for float trips in the upper Buffalo: Ponca to Kyles, Steel Creek, and Erbie.</strong>
+                    </p>
+                </div>
+                <div class="chart">
+                    <canvas class="charts" id="chartjs-2" width="400" height="400"></canvas>
+                    <p>NPS floating recommendations for Pruitt:
+                    <br>Very Low: Less than 4.24 ft.
+                    <br>Low: 4.24-4.69 ft.
+                    <br>Moderate: 4.69-6.59 ft.
+                    <br>High 6.59-8.28 ft.
+                    <br>Flood stage: Greater than 8.28 ft.
+                    <br><strong>The Pruitt gage is best for float trips in the middle Buffalo from Pruitt to the Hwy 65 bridge.</strong>
+                    </p>
+                </div>
+                <div class="chart">
+                    <canvas class="charts" id="chartjs-3" width="400" height="400"></canvas>
+                    <p><strong>NPS Recommendations for this gage were not available. The recommendations for the Pruitt gage cover this stretch of the river.</strong>
+                    </p>
+                </div>
+            </section>
+			<br>
+			<table id="levelguide" border="1" cellspacing="5" cellpadding="5">
+            <tbody>
+                <tr>
+                    <td><strong>Ponca/Steel Creek Launches</strong></td>
+                    <td>Very Low: Below 2.0'</td>
+                    <td>Low but Floatable: 2.0' to 2.4'</td>
+                    <td>Ample Water for Floating: 2.5' to 4.9'</td>
+                    <td>Experienced Floaters Only: 5.0' to 6.0'</td>
+                    <td>Flood Stage, River Closed: Over 6.0'</td>
+                </tr>
+                <tr>
+                    <td><strong>Highway 7 Bridge/Pruitt</strong></td>
+                    <td>Very Low: Below 4.4'</td>
+                    <td>Low but Floatable: 4.4' to 4.7'</td>
+                    <td>Ample Water for Floating: 4.8' to 6.6'</td>
+                    <td>Experienced Floaters Only: 6.7' to 8.0'</td>
+                    <td>Flood Stage, River Closed: Over 8.0'</td>
+                </tr>
+                <tr>
+                    <td><strong>Grinder's Ferry/Tyler Bend</strong></td>
+                    <td>Very Low: Below 3.3'</td>
+                    <td>Low but Floatable: 3.3' to 3.83'</td>
+                    <td>Ample Water for Floating: 3.83' to 7.94'</td>
+                    <td>Experienced Floaters Only: 7.94' to 11.76'</td>
+                    <td>Flood Stage, River Closed: Over 11.76'</td>
+                </tr>
+                <tr>
+                    <td><strong>Dillard's Ferry/Buffalo Point</strong></td>
+                    <td>Very Low: Below 2.0'</td>
+                    <td>Low but Floatable: 2.0' to 3.4'</td>
+                    <td>Ample Water for Floating: 3.5' to 5.9'</td>
+                    <td>Experienced Floaters Only: 6.0' to 10.0'</td>
+                    <td>Flood Stage, River Closed: Over 10.0'</td>
+                </tr>
+            </tbody>
+            </table>
+			<br><br>
+			<div id="RiverMileage">
+			<h3>River Mileage Chart</h3>
+<p>Average river flow is 2 miles per hour. Take the mileage between two points and divide by two. This should tell you approximately how many hours it will take you to float any given section of river. Paddle and float times vary depending on breaks, if you are paddling or not, and the river level.</p>
+<div class='table-wrapper'><table align="center" border="1" cellpadding="1" cellspacing="1" style="width:500px;">
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Access Points</strong></td>
+<td style="text-align: center;">Ponca</td>
+<td style="text-align: center;">Steel Creek</td>
+<td style="text-align: center;">Kyles Landing</td>
+<td style="text-align: center;">Erbie</td>
+<td style="text-align: center;">Ozark</td>
+<td style="text-align: center;">Pruitt</td>
+<td style="text-align: center;">Hasty</td>
+<td style="text-align: center;">Carver</td>
+<td style="text-align: center;">Mt. Hersey</td>
+<td style="text-align: center;">Woolum</td>
+<td style="text-align: center;">Baker Ford</td>
+<td style="text-align: center;">Tyler Bend</td>
+<td style="text-align: center;">Grinders Ferry</td>
+<td style="text-align: center;">Gilbert</td>
+<td style="text-align: center;">North Maumee</td>
+<td style="text-align: center;">South Maumee</td>
+<td style="text-align: center;">Spring Creek</td>
+<td style="text-align: center;">Dillards Ferry</td>
+<td style="text-align: center;">*Buffalo Point</td>
+<td style="text-align: center;">Rush</td>
+<td style="text-align: center;">Buffalo City</td>
+</tr>
+<tr>
+<td style="text-align: center;">Boxley</td>
+<td style="text-align: center;">6.0</td>
+<td style="text-align: center;">8.7</td>
+<td style="text-align: center;">16.7</td>
+<td style="text-align: center;">22.3</td>
+<td style="text-align: center;">27.8</td>
+<td style="text-align: center;">29.9</td>
+<td style="text-align: center;">36.7</td>
+<td style="text-align: center;">40.9</td>
+<td style="text-align: center;">47.7</td>
+<td style="text-align: center;">56.3</td>
+<td style="text-align: center;">67.2</td>
+<td style="text-align: center;">71.5</td>
+<td style="text-align: center;">72.6</td>
+<td style="text-align: center;">76.9</td>
+<td style="text-align: center;">88.5</td>
+<td style="text-align: center;">89.0</td>
+<td style="text-align: center;">93.7</td>
+<td style="text-align: center;">98.3</td>
+<td style="text-align: center;">99.7</td>
+<td style="text-align: center;">107.2</td>
+<td style="text-align: center;">131.4</td>
+</tr>
+<tr>
+<td style="text-align: center;">Ponca</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">2.7</td>
+<td style="text-align: center;">10.7</td>
+<td style="text-align: center;">16.3</td>
+<td style="text-align: center;">21.8</td>
+<td style="text-align: center;">23.9</td>
+<td style="text-align: center;">30.7</td>
+<td style="text-align: center;">34.9</td>
+<td style="text-align: center;">41.7</td>
+<td style="text-align: center;">50.3</td>
+<td style="text-align: center;">61.2</td>
+<td style="text-align: center;">65.5</td>
+<td style="text-align: center;">66.6</td>
+<td style="text-align: center;">70.9</td>
+<td style="text-align: center;">82.5</td>
+<td style="text-align: center;">83.0</td>
+<td style="text-align: center;">87.7</td>
+<td style="text-align: center;">92.3</td>
+<td style="text-align: center;">93.7</td>
+<td style="text-align: center;">101.2</td>
+<td style="text-align: center;">125.4</td>
+</tr>
+<tr>
+<td style="text-align: center;">Steel Creek</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">8.0</td>
+<td style="text-align: center;">13.6</td>
+<td style="text-align: center;">19.1</td>
+<td style="text-align: center;">21.1</td>
+<td style="text-align: center;">28.0</td>
+<td style="text-align: center;">32.2</td>
+<td style="text-align: center;">39.0</td>
+<td style="text-align: center;">47.6</td>
+<td style="text-align: center;">58.5</td>
+<td style="text-align: center;">62.8</td>
+<td style="text-align: center;">63.9</td>
+<td style="text-align: center;">68.2</td>
+<td style="text-align: center;">79.8</td>
+<td style="text-align: center;">80.3</td>
+<td style="text-align: center;">85.0</td>
+<td style="text-align: center;">89.6</td>
+<td style="text-align: center;">91.0</td>
+<td style="text-align: center;">98.5</td>
+<td style="text-align: center;">122.7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Kyles Landing</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">5.6</td>
+<td style="text-align: center;">11.1</td>
+<td style="text-align: center;">13.2</td>
+<td style="text-align: center;">20.0</td>
+<td style="text-align: center;">24.2</td>
+<td style="text-align: center;">31.0</td>
+<td style="text-align: center;">39.6</td>
+<td style="text-align: center;">50.5</td>
+<td style="text-align: center;">54.8</td>
+<td style="text-align: center;">55.9</td>
+<td style="text-align: center;">60.2</td>
+<td style="text-align: center;">71.8</td>
+<td style="text-align: center;">72.3</td>
+<td style="text-align: center;">77.0</td>
+<td style="text-align: center;">81.6</td>
+<td style="text-align: center;">83.0</td>
+<td style="text-align: center;">90.5</td>
+<td style="text-align: center;">114.7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Erbie</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">5.5</td>
+<td style="text-align: center;">7.6</td>
+<td style="text-align: center;">14.4</td>
+<td style="text-align: center;">18.6</td>
+<td style="text-align: center;">25.4</td>
+<td style="text-align: center;">34.0</td>
+<td style="text-align: center;">44.9</td>
+<td style="text-align: center;">49.2</td>
+<td style="text-align: center;">50.3</td>
+<td style="text-align: center;">54.6</td>
+<td style="text-align: center;">66.2</td>
+<td style="text-align: center;">66.7</td>
+<td style="text-align: center;">71.4</td>
+<td style="text-align: center;">76.0</td>
+<td style="text-align: center;">77.4</td>
+<td style="text-align: center;">84.9</td>
+<td style="text-align: center;">109.1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Ozark</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">2.1</td>
+<td style="text-align: center;">8.9</td>
+<td style="text-align: center;">13.1</td>
+<td style="text-align: center;">19.9</td>
+<td style="text-align: center;">28.5</td>
+<td style="text-align: center;">39.4</td>
+<td style="text-align: center;">43.7</td>
+<td style="text-align: center;">44.8</td>
+<td style="text-align: center;">49.1</td>
+<td style="text-align: center;">60.7</td>
+<td style="text-align: center;">61.2</td>
+<td style="text-align: center;">65.9</td>
+<td style="text-align: center;">70.5</td>
+<td style="text-align: center;">71.9</td>
+<td style="text-align: center;">79.4</td>
+<td style="text-align: center;">103.6</td>
+</tr>
+<tr>
+<td style="text-align: center;">Pruitt</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">6.8</td>
+<td style="text-align: center;">11.0</td>
+<td style="text-align: center;">17.8</td>
+<td style="text-align: center;">26.4</td>
+<td style="text-align: center;">37.3</td>
+<td style="text-align: center;">41.6</td>
+<td style="text-align: center;">42.7</td>
+<td style="text-align: center;">47.0</td>
+<td style="text-align: center;">58.6</td>
+<td style="text-align: center;">59.1</td>
+<td style="text-align: center;">63.8</td>
+<td style="text-align: center;">68.4</td>
+<td style="text-align: center;">69.8</td>
+<td style="text-align: center;">77.3</td>
+<td style="text-align: center;">101.5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Hasty</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">4.2</td>
+<td style="text-align: center;">11.0</td>
+<td style="text-align: center;">19.6</td>
+<td style="text-align: center;">30.5</td>
+<td style="text-align: center;">34.8</td>
+<td style="text-align: center;">35.9</td>
+<td style="text-align: center;">40.2</td>
+<td style="text-align: center;">51.8</td>
+<td style="text-align: center;">52.3</td>
+<td style="text-align: center;">57.0</td>
+<td style="text-align: center;">61.6</td>
+<td style="text-align: center;">63.0</td>
+<td style="text-align: center;">70.5</td>
+<td style="text-align: center;">94.7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Carver</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">6.8</td>
+<td style="text-align: center;">15.4</td>
+<td style="text-align: center;">26.3</td>
+<td style="text-align: center;">30.6</td>
+<td style="text-align: center;">31.7</td>
+<td style="text-align: center;">36.0</td>
+<td style="text-align: center;">47.6</td>
+<td style="text-align: center;">48.1</td>
+<td style="text-align: center;">52.8</td>
+<td style="text-align: center;">57.4</td>
+<td style="text-align: center;">58.8</td>
+<td style="text-align: center;">66.3</td>
+<td style="text-align: center;">90.5</td>
+</tr>
+<tr>
+<td style="text-align: center;">Mt. Hersey</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">8.6</td>
+<td style="text-align: center;">19.5</td>
+<td style="text-align: center;">23.8</td>
+<td style="text-align: center;">24.9</td>
+<td style="text-align: center;">29.2</td>
+<td style="text-align: center;">40.8</td>
+<td style="text-align: center;">41.3</td>
+<td style="text-align: center;">46.0</td>
+<td style="text-align: center;">50.6</td>
+<td style="text-align: center;">52.0</td>
+<td style="text-align: center;">59.5</td>
+<td style="text-align: center;">83.7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Woolum</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">10.9</td>
+<td style="text-align: center;">15.2</td>
+<td style="text-align: center;">16.3</td>
+<td style="text-align: center;">20.6</td>
+<td style="text-align: center;">32.2</td>
+<td style="text-align: center;">32.7</td>
+<td style="text-align: center;">37.4</td>
+<td style="text-align: center;">42.0</td>
+<td style="text-align: center;">43.4</td>
+<td style="text-align: center;">50.9</td>
+<td style="text-align: center;">75.1</td>
+</tr>
+<tr>
+<td style="text-align: center;">Baker Ford</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">4.3</td>
+<td style="text-align: center;">5.4</td>
+<td style="text-align: center;">9.7</td>
+<td style="text-align: center;">21.3</td>
+<td style="text-align: center;">21.8</td>
+<td style="text-align: center;">26.5</td>
+<td style="text-align: center;">31.1</td>
+<td style="text-align: center;">32.5</td>
+<td style="text-align: center;">40.0</td>
+<td style="text-align: center;">64.2</td>
+</tr>
+<tr>
+<td style="text-align: center;">Tyler Bend</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">1.1</td>
+<td style="text-align: center;">5.4</td>
+<td style="text-align: center;">17.0</td>
+<td style="text-align: center;">17.5</td>
+<td style="text-align: center;">22.2</td>
+<td style="text-align: center;">26.8</td>
+<td style="text-align: center;">28.2</td>
+<td style="text-align: center;">35.7</td>
+<td style="text-align: center;">59.9</td>
+</tr>
+<tr>
+<td style="text-align: center;">Grinders Ferry</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">4.3</td>
+<td style="text-align: center;">15.9</td>
+<td style="text-align: center;">16.4</td>
+<td style="text-align: center;">21.1</td>
+<td style="text-align: center;">25.7</td>
+<td style="text-align: center;">27.1</td>
+<td style="text-align: center;">34.6</td>
+<td style="text-align: center;">58.8</td>
+</tr>
+<tr>
+<td style="text-align: center;">Gilbert</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">11.6</td>
+<td style="text-align: center;">12.1</td>
+<td style="text-align: center;">16.8</td>
+<td style="text-align: center;">21.4</td>
+<td style="text-align: center;">22.8</td>
+<td style="text-align: center;">30.3</td>
+<td style="text-align: center;">58.8</td>
+</tr>
+<tr>
+<td style="text-align: center;">North Maumee</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">.5</td>
+<td style="text-align: center;">5.2</td>
+<td style="text-align: center;">9.8</td>
+<td style="text-align: center;">11.2</td>
+<td style="text-align: center;">18.7</td>
+<td style="text-align: center;">42.9</td>
+</tr>
+<tr>
+<td style="text-align: center;">South Maumee</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">4.7</td>
+<td style="text-align: center;">9.3</td>
+<td style="text-align: center;">10.7</td>
+<td style="text-align: center;">18.2</td>
+<td style="text-align: center;">42.4</td>
+</tr>
+<tr>
+<td style="text-align: center;">Spring Creek</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">4.6</td>
+<td style="text-align: center;">6.0</td>
+<td style="text-align: center;">13.5</td>
+<td style="text-align: center;">37.7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Dillards Ferry</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">1.4</td>
+<td style="text-align: center;">8.9</td>
+<td style="text-align: center;">33.1</td>
+</tr>
+<tr>
+<td style="text-align: center;">*Buffalo Point</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">7.5</td>
+<td style="text-align: center;">31.7</td>
+</tr>
+<tr>
+<td style="text-align: center;">Rush</td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;"> </td>
+<td style="text-align: center;">24.2</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>* The road down to the launch at Buffalo Point is closed. If you put in or take out at Buffalo Point you will need to carry your boat and gear up the large and steep gravel bar to the parking lot. You may want to consider taking out at Dillards Ferry, which is 1.5 miles upstream from Buffalo Point.</strong></p>
+</div>
+		<div class="push"></div>
+	</main>
+	</div>
+	<footer class="footer">
+		<img alt="Ozark Rush Adventures" src="assets/img/asset2white.png">
+		<p>&copy; 2021 Ozark Rush Adventures</p>
+	</footer>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-    <script src="../assets/js/local-calls.js"></script>
-</body>
-</html>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/local-calls.js"></script>
 
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166250117-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-166250117-2');
+</script>
+</body>
+
+</html>

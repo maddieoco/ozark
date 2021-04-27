@@ -112,7 +112,105 @@ nav ul li a:hover, a:focus {
   background-repeat: no-repeat;
   background-size: cover;
 }
+/*Booking Page Hero Image*/
+.hero-image-booking {
+  background-image: url("../img/bedroom.jpg");
+  height: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-text-booking {
+  font-family: cubano, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  padding-top: 10em;
+  text-align: center;
+  color: white;
+  max-height: 100%;
+}
+.hero-text-booking img {
+    height: 5em;
+}
+/*End Booking Page Hero Image*/
+/*Contact Page Hero Image*/
+.hero-image-contact {
+  background-image: url("../img/group-of-canoeing.jpg");
+  height: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-text-contact {
+  font-family: cubano, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  padding-top: 10em;
+  text-align: center;
+  color: white;
+  max-height: 100%;
+}
+.hero-text-contact img {
+    height: 5em;
+}
+.hero-text-contact button {
+  border-radius: 2em;
+	background-color:rgba(107,117,164,1.00);
+	color: white;
+	font-size: 1em;
+	padding: .25em 1em;
+	margin-bottom:1em;
+}
+.hero-text-contact a:hover, a:focus {
+  text-decoration: none;
+  background-image: url("../img/paddle.png");
+  background-size: 100% 18px; 
+  background-repeat: no-repeat; 
+  background-position: bottom;
+padding-bottom:28px;  
+}
+/*End Contact Page Hero Image*/
+/*About Page Hero Image*/
+.hero-image-about {
+  background-image: url("../img/overhead-action.jpg");
+  height: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-text-about {
+  font-family: cubano, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5em;
+  padding-top: 10em;
+  text-align: center;
+  color: white;
+  max-height: 100%;
+}
+.hero-text-about img {
+    height: 5em;
+}
+.hero-text-about button {
+  border-radius: 2em;
+	background-color:rgba(107,117,164,1.00);
+	color: white;
+	font-size: 1em;
+	padding: .25em 1em;
+	margin-bottom:1em;
+}
+.hero-text-about a:hover, a:focus {
+  text-decoration: none;
+  background-image: url("../img/paddle.png");
+  background-size: 100% 18px; 
+  background-repeat: no-repeat; 
+  background-position: bottom;
+padding-bottom:28px;  
+}
 
+/*End About Page Hero Image*/
 .hero-text {
   font-family: cubano, sans-serif;
   font-weight: 400;
@@ -317,6 +415,47 @@ footer img {
 #myBtn:hover {
   background-color: #555;
 }
+
+/*About Page Styling*/
+article.about {
+	width: 75%;
+	margin: 10vh auto;
+	box-shadow: 0 4px 8px rgba(0,0,0,.4);
+  	border-radius:10px;
+  	font-size:.9em;
+  	transition:.5s;
+	padding: 0.7em;
+}
+article.about header {
+	background-color: #225579;
+  	height: 4em;
+  	margin-bottom: 2em;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	border-radius: 5px;
+	color: white;
+	font-size: 125%;
+	
+}
+article.about:hover{
+  box-shadow: 0 8px 16px rgba(0,0,0,.4);
+}
+article.aboutimgclass{
+  width: 75%;
+	margin: 10vh auto;
+	box-shadow: 0 4px 8px rgba(0,0,0,.4);
+  	border-radius:10px;
+  	transition:.5s;
+	padding: 0.7em;
+}
+.aboutimg{
+  width:25%;
+  height:25%;
+  align-items: center;
+  justify-content:center;
+  padding:2% 3.75%;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -449,6 +588,7 @@ footer img {
     width: 100vw;
     height: 100vh;
     background: var(--bg-color);
+    padding-bottom:15em;
   }
   
   .left-col {
