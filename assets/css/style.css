@@ -216,7 +216,7 @@ padding-bottom:28px;
   background-position: bottom;
 padding-bottom:28px;  
 }
-.mapimages iframe, img {
+.mapimages iframe, .mapimages img {
 width:45%;
 max-height:45%;
 }
@@ -243,6 +243,9 @@ max-height:45%;
 	color: white;
 	font-size: 1em;
 	padding: .25em 1em;
+}
+button a {
+  color: white;
 }
 .hero-text button:hover, button:focus {
   cursor: pointer;
