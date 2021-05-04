@@ -255,11 +255,6 @@
               
           
           }); 
-        $('.gallery').cycle({
-		fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-		speed: 300
-	});        
-        });
 //Get the button
 var mybutton = document.getElementById("myBtn");
 

@@ -216,6 +216,10 @@ padding-bottom:28px;
   background-position: bottom;
 padding-bottom:28px;  
 }
+.mapimages iframe, img {
+width:45%;
+max-height:45%;
+}
 
 /*End About Page Hero Image*/
 
@@ -395,7 +399,7 @@ article.booking img {
 	position: relative;
     left: 0;
     bottom: 0;
-    height: 100px;
+    height: 10em;
     width: 100%;
 }
 footer {
@@ -969,21 +973,6 @@ margin-right:auto;
     text-align: center;
   }
   
-/*carousel stuff*/
-.embla {
-  overflow: hidden;
-}
-.embla__container {
-  display: flex;
-}
-.embla__slide {
-  position: relative;
-  flex: 0 0 100%;
-}
-
-
-
-
 .subhead{
   text-align:center;
 }
