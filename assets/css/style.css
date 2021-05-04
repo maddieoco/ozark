@@ -105,6 +105,7 @@ nav ul li a:hover, a:focus {
   padding-bottom: 15px; 
 }
 
+/*Main Hero Image*/
 .hero-image {
   background-image: url("../img/dark-river.jpg");
   height: 100%;
@@ -163,6 +164,9 @@ nav ul li a:hover, a:focus {
 	padding: .25em 1em;
 	margin-bottom:1em;
 }
+.hero-text-contact button:hover, button:focus {
+  cursor: pointer;
+}
 .hero-text-contact a:hover, a:focus {
   text-decoration: none;
   background-image: url("../img/paddle.png");
@@ -201,6 +205,9 @@ padding-bottom:28px;
 	padding: .25em 1em;
 	margin-bottom:1em;
 }
+.hero-text-about button:hover, button:focus {
+  cursor: pointer;
+}
 .hero-text-about a:hover, a:focus {
   text-decoration: none;
   background-image: url("../img/paddle.png");
@@ -211,6 +218,7 @@ padding-bottom:28px;
 }
 
 /*End About Page Hero Image*/
+
 .hero-text {
   font-family: cubano, sans-serif;
   font-weight: 400;
@@ -225,17 +233,23 @@ padding-bottom:28px;
 .hero-text img {
     height: 10em;
 }
-.hero-text button {
+/*.hero-text*/ button {
   border-radius: 2em;
 	background-color:rgba(107,117,164,1.00);
 	color: white;
 	font-size: 1em;
 	padding: .25em 1em;
 }
-.hero-text button:hover, .hero-text button:active {
-	opacity: 0.5;
-	cursor: pointer;
-	background-image: none;
+.hero-text button:hover, button:focus {
+  cursor: pointer;
+}
+.hero-text a:hover, a:focus {
+	text-decoration: none;
+  background-image: url("../img/paddle.png");
+  background-size: 100% 18px; 
+  background-repeat: no-repeat; 
+  background-position: bottom;
+  padding-bottom:28px;  
 }
 main .section-header {
 	height: 100px;
@@ -337,16 +351,18 @@ article.post button:hover, article.post button:active {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 #cabin {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
   	justify-content: space-around;
   	padding-bottom:2.6em;
 }
 article.booking {
 	width: 45%;
-	margin: 10vh auto;
+	margin: 2vh auto;
 	box-shadow: 0 4px 8px rgba(0,0,0,.4);
   	border-radius:10px;
   	font-size:.9em;
@@ -370,6 +386,7 @@ article.booking:hover{
 }
 article.booking iframe {
 	width: 100%;
+	height: 80%;
 }
 article.booking img {
 	max-width: 100%;
@@ -396,7 +413,11 @@ footer img {
 	height: 5em;
 	padding-right: 5em;
 }
+footer a {
+  color: white;
+}
 #myBtn {
+  font-family: cubano;
   display: none;
   position: fixed;
   bottom: 20px;
@@ -415,16 +436,137 @@ footer img {
 #myBtn:hover {
   background-color: #555;
 }
+.glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; }
+.glide * {
+  box-sizing: inherit; }
+.glide__track {
+  overflow: hidden; }
+.glide__slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  touch-action: pan-Y;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform; }
+.glide__slides--dragging {
+  user-select: none; }
+.glide__slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  white-space: normal;
+  user-select: none;
+  
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent; }
+.glide__slide a {
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+.glide__slide img {
+  max-width: 100%;
+}
+.glide--rtl {
+  direction: rtl; }
+.glide__arrow {
+  font-family: cubano;
+  -webkit-touch-callout: none;
+  user-select: none;
+  position: absolute;
+  display: block;
+  top: 50%;
+  z-index: 2;
+  color: white;
+  text-transform: uppercase;
+  padding: 9px 12px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2em;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 150ms ease, border 300ms ease-in-out;
+  transform: translateY(-50%);
+  line-height: 1; }
+.glide__arrow:focus {
+  outline: none; }
+.glide__arrow:hover {
+  border-color: white; }
+.glide__arrow--left {
+  left: 2em; }
+.glide__arrow--right {
+  right: 2em; }
+.glide__arrow--disabled {
+  opacity: 0.33; }
 
+.glide__bullets {
+  -webkit-touch-callout: none;
+  user-select: none;
+  position: absolute;
+  z-index: 2;
+  bottom: 2em;
+  left: 50%;
+  display: inline-flex;
+  list-style: none;
+  transform: translateX(-50%); }
+
+.glide__bullet {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  line-height: 0;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  margin: 0 0.25em; }
+.glide__bullet:focus {
+  outline: none; }
+.glide__bullet:hover, .glide__bullet:focus {
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.5); }
+.glide__bullet--active {
+  background-color: white; }
+
+.glide--swipeable {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
+
+.glide--dragging {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing; }
 /*About Page Styling*/
 article.about {
 	width: 75%;
-	margin: 10vh auto;
+	margin: 2vh auto;
 	box-shadow: 0 4px 8px rgba(0,0,0,.4);
   	border-radius:10px;
   	font-size:.9em;
   	transition:.5s;
 	padding: 0.7em;
+}
+article.about button{
+    border-radius: 2em;
+	background-color:rgba(107,117,164,1.00);
+	color: white;
+	font-size: 1em;
+	padding: .25em 1em;
+	margin-bottom:1em;
 }
 article.about header {
 	background-color: #225579;
@@ -455,6 +597,13 @@ article.aboutimgclass{
   align-items: center;
   justify-content:center;
   padding:2% 3.75%;
+}
+#aboutwildlife{
+width:75%;
+display:block;
+  margin-left:auto;
+margin-right:auto;
+  
 }
 /* ==========================================================================
    Helper classes
@@ -502,8 +651,55 @@ article.aboutimgclass{
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media (max-width: 550px){
+	nav {
+		overflow: hidden;
+		position: fixed;
+ 		top: 0;
+    width: 100%;
+		background: rgba(56,79,35,.60);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	#content{
+  		flex-direction: column;
+  		flex-wrap: wrap;
+	}
+	article.post{
+  		width: 100%;
+	}
+	article.booking {
+	  width: auto;
+	}
+}
+@media (min-width: 551px) and (max-width: 768px){
+	nav {
+		overflow: hidden;
+		position: fixed;
+ 		top: 0;
+    	width: 100%;
+		background: rgba(56,79,35,.60);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	#content{
+  		flex-wrap: wrap;
+	}
+	article.post{
+  		width: 45%;
+	}
+}
+@media (min-width:769px) and (max-width:1024px){
+	#content{
+  		flex-wrap: wrap;
+	}
+	article.post{
+  		width: 45%;
+	}
 }
 
 @media print,
@@ -595,7 +791,7 @@ article.aboutimgclass{
     width: 45vw;
     height: 100%;
     background-repeat: no-repeat;
-    align-items: left;
+    align-items:center;
   }
   
   .logo {
@@ -720,11 +916,12 @@ article.aboutimgclass{
     flex-wrap: wrap;
     flex-direction:row;
     
-    
   }
   
   #levelguide {
-    margin:auto;
+    margin: auto;
+    text-align: center;
+    width: 90%;
     
     
   }
@@ -740,4 +937,53 @@ article.aboutimgclass{
     border-color: rgba(75, 89, 47, .5);
     padding: 10px;
     margin: 10px;
+    
   }
+  
+   #RiverMileage {
+    width: 90vw;
+    margin: auto;
+  }
+  
+   #RiverMap img  {
+    width: 100%;
+    margin: auto;
+  }
+  
+   #RiverMap {
+    width: 90vw;
+    margin: auto;
+  }
+  
+  .table-wrapper {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+  
+  #fullscreenmap {
+    text-align: center;
+  }
+  
+  #rivertable {
+    text-align: center;
+  }
+  
+/*carousel stuff*/
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  position: relative;
+  flex: 0 0 100%;
+}
+
+
+
+
+.subhead{
+  text-align:center;
+}
